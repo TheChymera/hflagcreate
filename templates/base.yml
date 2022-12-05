@@ -1,0 +1,35 @@
+- code: de_1867
+  name: "German Imperial Flag"
+  full_name : "1867 Flag of the North German Confederation and the German Empire"
+  relative_height : 2
+  relative_width : 3
+
+- code: de_1919
+  name: "Weimar Republic Flag"
+  full_name : "1919 Flag of the German Empire"
+  relative_height : 2
+  relative_width : 3
+
+- code: de_1933
+  name: "German Imperial Flag (3/5)"
+  full_name : "1919 Flag of the German Empire"
+  relative_height : 3
+  relative_width : 5
+
+- code: de_1949
+  name: "GDR Flag"
+  full_name : "1949 Flag of the German Federal Republic"
+  relative_height : 3
+  relative_width : 5
+
+- code: fr_1794
+  name: "French Flag"
+  full_name : "1794 Flag of the French Republic"
+  relative_height : 2
+  relative_width : 3
+
+- code: fr_1974
+  name: "French Flag (Light)"
+  full_name : "1974 Flag of the French Republic"
+  relative_height : 2
+  relative_width : 3
