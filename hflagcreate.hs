@@ -6,7 +6,7 @@ import Data.Monoid ((<>))
 -- for YAML
 import Data.Yaml
 import Control.Applicative -- <$>, <*>
-import Data.Maybe (fromJust, isJust)
+import Data.Maybe (fromJust, isJust, fromMaybe)
 import qualified Data.ByteString.Char8 as BS
 
 data MyFlag = MyFlag
@@ -34,14 +34,11 @@ instance FromJSON MyFlag where
 interpretArgs :: MyArgs -> IO ()
 interpretArgs (MyArgs codeselect flip addon) =
     do
-      let conffile = if isJust addon
-                     then fromJust addon
-                     else "test.yml"
+      let conffile = fromMaybe "templates/base.yml" addon
       ymlData <- BS.readFile conffile
       flags <- Data.Yaml.decodeThrow ymlData
       let flagselect = head (filter (\a -> code a == codeselect) flags)
       let nameselect = name flagselect
-      --print nameselect
       putStrLn ("You have selected the " ++ nameselect ++ ".")
 
 
